@@ -9,7 +9,7 @@ export const Router = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="/" component={Home} />
-        <Stack.Screen name="MyPlans" component={MyPlans} />
+        <Stack.Screen name="Meus Planos" component={MyPlans} />
       </Stack.Navigator>
     </NavigationContainer>
   );
