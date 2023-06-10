@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <View style={homeStyles.HomeContainer}>
       <View>
-        <Image source={require("../../../assets/images/IconHome.png")} />
+        <Image source={require("../../../assets/images/IconHome.png")} style={homeStyles.Image} />
       </View>
       <View style={homeStyles.ButtonContainer}>
         <TouchableOpacity style={homeStyles.ButtonHome} onPress={() =>
@@ -35,6 +35,10 @@ const homeStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "#fff",
+  },
+  Image: {
+    width: 200,
+    height: 200,
   },
   ButtonContainer: {
     margin: "50px",
