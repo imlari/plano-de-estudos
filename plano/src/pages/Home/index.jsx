@@ -1,12 +1,16 @@
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 export const Home = () => {
   const navigation = useNavigation();
 
   return (
     <View style={homeStyles.HomeContainer}>
+      <View>
+        <Image source={require("../../../assets/images/IconHome.png")} />
+      </View>
       <View style={homeStyles.ButtonContainer}>
-        <TouchableOpacity style={homeStyles.ButtonHome}>
+        <TouchableOpacity style={homeStyles.ButtonHome} onPress={() =>
+          navigation.navigate("Adicionar Plano")}>
           <Text style={homeStyles.ButtonText}>Adicionar plano de estudos</Text>
         </TouchableOpacity>
         <TouchableOpacity style={homeStyles.ButtonHome} onPress={() =>
@@ -30,6 +34,7 @@ const homeStyles = StyleSheet.create({
     width: "100%",
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: "#fff",
   },
   ButtonContainer: {
     margin: "50px",
@@ -38,7 +43,8 @@ const homeStyles = StyleSheet.create({
     backgroundColor: "#00c9bc",
     height: "67px",
     width: "315px",
-    alignItems: "center",
+    alignItems: "flex-start",
+    paddingHorizontal: "30px",
     justifyContent: "center",
     margin: "6px",
     borderRadius: "32px",
